@@ -1,0 +1,127 @@
+
+  .btnView{
+    padding: 10px 20px;
+    font-size: 17px;
+    background: none;
+    margin-top: 20px;
+    border-color: #baabda;
+    color: #baabda;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+  }
+  
+  .btnView:hover{
+    background: #baabda;
+    color: #201f1f;
+    border-radius: 7px;
+  }
+  
+  
+  .listItem{
+    padding: 0px 35px;
+    list-style-type: none;
+    font-size: 20px;
+  }
+  .ulList{
+    margin-left: 30px;
+  }
+  
+  .linkItem{
+    text-decoration: none;
+    color: #cccccc;
+  
+  }
+  
+  
+  
+  .linkedinLink{
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -120px;
+    text-decoration: none;
+    color: #fafafa;
+    padding: 5px;
+    background: #294aa6;
+  }
+  
+  .email{
+    background: #3f9885;
+  }
+  .github{
+    background: #201f1f;
+  
+  }
+  
+  .linkedinLink:hover{
+    margin-left: 0px;
+    transition: all .4s ease-in-out;
+    background-color: #657fc8;
+  }
+  
+  .email:hover{
+    background: #6fc2b0;
+  }
+  
+  .github:hover{
+    background: #424141;
+  }
+  
+  .resume:hover{
+    background: #565f69;
+  }
+  .resume{
+    background: #38495e;
+  }
+
+  
+  .btnSpan:hover{
+    transform: rotate(90deg);
+    transition: all .2s ease-out;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 900px){
+  .listItem{
+    padding: 0px 14px;
+    font-size: 19px;
+  }
+  .ulList{
+    margin-left: 10px;
+  }
+  }
+  /* @media (max-width: 1900px){
+    .listItem{
+      padding: 0px 26px;
+      font-size: 19px;
+    }
+    .ulList{
+      margin-left: 49px;
+    }
+  
+    } */
