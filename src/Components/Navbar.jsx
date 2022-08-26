@@ -125,8 +125,8 @@ const Navbar = () => {
         </AppBar>
         <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",md:"block"}}}>
             <Grid item xs={12}>
-                    <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} className="mainBox">
-                    <div>
+                    <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} >
+                    <div className="mainBox">
                         <Link to="/" className='linkedinLink' >
                         Linkedin  <FaLinkedin fontSize="50px"/>
                         </Link>

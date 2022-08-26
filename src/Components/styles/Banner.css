@@ -10,7 +10,7 @@
     display: flex;
     justify-content:center;
     align-items: center;
-
+    transition: all .2s ease-in-out;
   }
   
   .btnView:hover{
@@ -32,17 +32,16 @@
   .linkItem{
     text-decoration: none;
     color: #cccccc;
-  
   }
   
-  
+ 
   
   .linkedinLink{
+    margin-left: -120px;
     width: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: -120px;
     text-decoration: none;
     color: #fafafa;
     padding: 5px;
@@ -108,7 +107,7 @@
 
   @media (max-width: 900px){
   .listItem{
-    padding: 0px 14px;
+    padding: 0px 6px;
     font-size: 19px;
   }
   .ulList{

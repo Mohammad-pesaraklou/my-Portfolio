@@ -1,32 +1,101 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
-
-
+import { Box, Container, Grid, Typography } from '@mui/material';
+import HtmlP from '../Assets/html.png';
+import CSS from '../Assets/css.png';
+import Js from '../Assets/javascript.png';
+import reactPhoto from '../Assets/react.png';
+import matreialUi from '../Assets/logo.png';
+import rest from '../Assets/picwish.png';
+import gitPhoto from '../Assets/github.png';
+import Graph from '../Assets/index.png';
+//styles
 import "./styles/Skills.css";
+
+
+
 
 const Skills = () => {
     return (
-        <div className='container'>
-                   <Grid container className='container'p={2}>
-           <Grid item xs={12} sx={{display:"flex",justifyContent:{xs:"left",md:"center"},ml:{xs:15,sm:0,lg:0},alignItems:"center",transform:"translateY(60px)"}}>
-            <Typography variant="h2" className='aboutText'>
-                About
-            </Typography>
-           </Grid>
-           <Grid container spacing={2} sx={{display:{xs:"block",md:"flex"},justifyContent:"center",alignItems:"center"}}>
-                <Grid item xs={12} md={6}> 
-                <Typography variant="h5" fontFamily={"Montserrat"} textAlign={{xs:'left',sm:"left",md: "center"}}>
-                   hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad
-                </Typography>
+          <Container maxWidth="lg">
+                       <Grid container className='container' p={4}>
+                <Grid item xs={12} sx={{display:"flex",alignItems:"center"}}>
+                    <Typography variant="h3" mb={2} fontFamily="Montserrat" className='textSkill'>
+                        Skills
+                    </Typography>
                 </Grid>
-                <Grid item xs={12} md={6} sx={{mt:{xs:6,sm:6,md:0}}}>
-                <Typography variant="h5" fontFamily={"Montserrat"} textAlign={{xs:'left',sm:"left",md: "center"}}>
-                   hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad hi iam mohammad
-                </Typography>
+                <Grid item xs={12} sx={{display:"flex",alignItems:"center"}}>
+                    <Typography variant="h5" mb={2} fontFamily="Montserrat" className='secondText'>
+                        // These are the Technologies i've worked with
+                    </Typography>
                 </Grid>
-           </Grid>
-        </Grid>
-        </div>
+                <Grid container spacing={4}>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={HtmlP} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                            HTML    
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={CSS} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                            CSS    
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={Js} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                            JAVASCRIPT    
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={reactPhoto} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                            REACT    
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={matreialUi} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                               MATERIAL-UI
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={Graph} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                            GRAPH QL    
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={rest} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                           REST API    
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
+                           <img src={gitPhoto} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                               GITHUB 
+                        </Typography> 
+                        </div>
+                    </Grid>
+                </Grid>
+            </Grid>
+          </Container>
     );
 };
 

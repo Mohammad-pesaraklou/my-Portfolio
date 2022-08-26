@@ -1,0 +1,82 @@
+.workContainer{
+    height: 130vh;
+    color: #cccccc;
+    
+}
+.imgP2{
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.textWork{
+    border-bottom: 2px solid #db6400;
+    color: #cccccc;
+}
+.ss{
+   color: #21201e;
+}
+.secondText{
+    color: #baabda;
+    
+}
+.btn2{
+    display: none;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #db6300e7;
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+.btn2:hover{
+    background-color: #c79770e3;
+    cursor: pointer;
+    transition: all .2ms ease-in-out;
+}
+
+.gitLink{
+    text-decoration: none;
+}
+
+
+
+
+.signItem{
+    background-image: url(../Assets/project-Pic/sign-up.png);
+    background-position: center;
+    background-size: cover;    
+}
+.weblogItem{
+    background-image: url(../Assets/project-Pic/weblog.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.currencyItem{
+    background-image: url(../Assets/project-Pic/currency.png);
+    background-position: center;
+    background-size: cover;
+
+}
+.storItem{
+    background-image: url(../Assets/project-Pic/store.png);
+    background-position: center;
+    background-size: cover;
+}
+.weather{
+    background-image: url(../Assets/project-Pic/weather.png);
+    background-position: center;
+    background-size: cover;
+}
+.recipeApp{
+    background-image: url(../Assets/project-Pic/weather.png);
+    background-position: center;
+    background-size: cover;
+}

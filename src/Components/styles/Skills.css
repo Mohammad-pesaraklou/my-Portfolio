@@ -2,3 +2,30 @@
     height: 100vh;
     color: #cccccc;
 }
+.imgP{
+    height: 90px;
+    width: 90px;
+
+}
+.itemContainer{
+    background: #ffffff1e;
+    /* width: 150px; */
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.itemContainer:hover{
+    transform: scale(1.1);
+    transition: all .2s ease-out;
+}
+.textSkill{
+    border-bottom: 2px solid #db6400;
+    color: #cccccc;
+}
+.secondText{
+    color: #baabda;
+
+}
