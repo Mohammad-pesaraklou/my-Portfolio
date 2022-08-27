@@ -3,10 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .app{
-  /* background: linear-gradient(to bottom right,#333333,#121212);  */
-  /* background: #0a192f; */
   height: 100vh;
   width: 100%;
   font-family: "Montserrat";

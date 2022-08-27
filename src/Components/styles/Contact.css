@@ -1,0 +1,21 @@
+.textContact{
+    border-bottom: 2px solid #db6400;
+    color: #cccccc;
+}
+.contactText{
+    color: #baabda;
+}
+
+.contactBtn{
+    background: none;
+    border: 2px solid #db6400;
+    color: #cccccc;
+    font-size: 20px;
+    padding: 18px 27px;
+    font-family: 'Montserrat';
+}
+.contactBtn:hover{
+    background-color: #db6400;
+    transition: all .2s ease-in-out;
+
+}

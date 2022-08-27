@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Button, Card, CardContent, Container, Grid, Typography } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import {  Button,Container, Grid, Typography } from '@mui/material';
 //styles
 import './styles/Work.css';
 import styled from '@emotion/styled';
@@ -8,12 +7,10 @@ import styled from '@emotion/styled';
 
 const Work = () => {
 
-    const navigate = useNavigate();
-
-
     return (
-    <Container>
+    <Container maxWidth="lg" name="work">
             <Grid container className='workContainer' p={4}>
+                
         <Grid item xs={12} sx={{display:"flex",alignItems:"center"}}>
             <Typography variant="h3" mb={2} fontFamily="Montserrat" className='textWork'>
                 Work
@@ -85,7 +82,34 @@ const Work = () => {
                </div> 
                 </Div>
             </Grid>
-
+            <Grid item xs={12} sm={6} lg={4}>
+            <div className='recipeApp' style={{height:'300px'}}>
+            </div>
+                     <Div>
+                <div style={{display: 'flex',alignItems:'center',flexWrap: 'wrap',justifyContent:"center"}}>
+                        <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6">
+                        Project Name: 
+                    </Typography>
+                    <Typography fontFamily="Montserrat" color={"#010201"} fontWeight={600} >
+                        Recipe App
+                        </Typography>
+                    </div>
+                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6" sx={{display:'flex',alignItems:'center'}}>
+                      Description:
+                   </Typography>
+                   <Typography fontFamily="Montserrat" color={"#010201"} mb={3}>
+                        This web app created by React Js(Redux)& Material-ui and libary such as splide js and framer motion
+                    </Typography>
+                <div className='btnContainer'>
+                    <a className='gitLink' href="https://github.com/Mohammad-pesaraklou/Recipe-app">
+                    <Button variant="contained">Git Rep</Button>
+                    </a>
+                    <a className='gitLink' href="https://currencylandate.netlify.app/">
+                    <Button variant="contained">Demo</Button>
+                    </a>
+                </div> 
+                    </Div>
+            </Grid>
             <Grid item xs={12} sm={6} lg={4}>
              <div className='storItem' style={{height:'300px'}}>
               </div>
@@ -103,13 +127,15 @@ const Work = () => {
                       Description:
                    </Typography>
                    <Typography fontFamily="Montserrat" color={"#010201"} mb={3}>
-                        This web app created by React Js& React Context and Pure Css 
+                        This web app created by React Js(Redux)& React Context and Pure Css 
                     </Typography>
                <div className='btnContainer'>
                    <a className='gitLink' href="https://github.com/Mohammad-pesaraklou/store-shop">
                    <Button variant="contained">Git Rep</Button>
                    </a>
+                   <a className='gitLink' href='https://storeshopate.netlify.app'>
                    <Button variant="contained">Demo</Button>
+                   </a>
                </div> 
                 </Div>
              
@@ -169,34 +195,7 @@ const Work = () => {
                 </Div>
           
             </Grid>
-            <Grid item xs={12} sm={6} lg={4}>
-            <div className='recipeApp' style={{height:'300px'}}>
-            </div>
-                     <Div>
-                <div style={{display: 'flex',alignItems:'center',flexWrap: 'wrap',justifyContent:"center"}}>
-                        <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6">
-                        Project Name: 
-                    </Typography>
-                    <Typography fontFamily="Montserrat" color={"#010201"} fontWeight={600} >
-                        Store shop
-                        </Typography>
-                    </div>
-                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6" sx={{display:'flex',alignItems:'center'}}>
-                      Description:
-                   </Typography>
-                   <Typography fontFamily="Montserrat" color={"#010201"} mb={3}>
-                        This web app created by React Js& React Context and Pure Css 
-                    </Typography>
-                <div className='btnContainer'>
-                    <a className='gitLink' href="https://github.com/Mohammad-pesaraklou/Recipe-app">
-                    <Button variant="contained">Git Rep</Button>
-                    </a>
-                    <a className='gitLink' href="https://currencylandate.netlify.app/">
-                    <Button variant="contained">Demo</Button>
-                    </a>
-                </div> 
-                    </Div>
-            </Grid>
+       
         </Grid>
     </Grid>
     </Container>

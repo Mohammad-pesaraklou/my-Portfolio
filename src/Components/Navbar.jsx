@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import { AppBar, Grid, Toolbar } from '@mui/material'
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -13,19 +13,18 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import {Link} from 'react-router-dom'
 import { GiSkills } from 'react-icons/gi' 
-import { GrContact } from 'react-icons/gr' 
 import { IoMdCodeWorking } from 'react-icons/io' 
-import { useState } from 'react';
 import styled from '@emotion/styled';
 import HomeIcon from '@mui/icons-material/Home';
 import {FaGithub, FaLinkedin} from 'react-icons/fa'
-import SpeedDial from '@mui/material/SpeedDial';
 import { RiContactsLine } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
+import { BsLink45Deg } from 'react-icons/bs';
+import { Link } from 'react-scroll';
+//Resume
+import docL from '../Assets/Resume/Nresume.docx'
 
 const Navbar = () => {
 
@@ -37,36 +36,36 @@ const Navbar = () => {
 
     return (
       <>
-        <AppBar color="transparent" sx={{position:'relative'}}>
+        <AppBar position='sticky' sx={{background: 'linear-gradient(to bottom right,#333333,#121212)'}}>
            <Toolbar sx={{display:'flex',justifyContent: "space-between",p:2}}>
              <Typography  variant="h3"sx={{color:"#db6400",marginLeft:{lg:"70px"}}}>
-                Portofilo
+                Portfolio
             </Typography>
 
             <Box className='ulList' sx={{display:{xs:"none",sm: "flex"}}}>
-                <ul className='ulList' style={{display: 'flex',margin: '0 10px'}}>
-                    <li className='listItem'>
-                    <Link to="/" className='linkItem'>
+                <ul className='ulList' style={{display: 'flex',margin: '0 10px',fontFamily: "Montserrat"}}>
+                    <li className='listItem linkItem'>
+                    <Link to="home" smooth={true} duration={900} >
                         Home
                     </Link>
                     </li>
-                    <li className='listItem'>
-                    <Link to="/" className='linkItem'>
+                    <li className='listItem linkItem'>
+                    <Link to="about" smooth={true} duration={900} >
                         About
                     </Link>
                     </li>
-                    <li className='listItem'>
-                    <Link to="/" className='linkItem'>
-                        Skill
+                    <li className='listItem linkItem'>
+                    <Link to="skills" smooth={true} duration={900} >
+                        Skills
                     </Link>
                     </li>
-                    <li className='listItem'>
-                    <Link to="/" className='linkItem'>
+                    <li className='listItem linkItem'>
+                    <Link to="work" smooth={true} duration={900} >
                         Work
                     </Link>
                     </li>
-                    <li className='listItem'>
-                    <Link to="/" className='linkItem'>
+                    <li className='listItem linkItem'>
+                    <Link to="contact" smooth={true} duration={900} >
                         Contact
                     </Link>
                     </li>
@@ -80,7 +79,7 @@ const Navbar = () => {
             onClick={handler}
             sx={{ ...(toggle && { display: 'none' }),position: 'absolute',right: "30px",  display:{xs: 'flex',sm:'none'} }}
           >
-            <MenuIcon sx={{color: '#674ea7',fontSize: "50px"}}/>
+            <MenuIcon sx={{color: '#db6400',fontSize: "50px"}}/>
           </IconButton>
       <Drawer
         sx={{
@@ -97,20 +96,66 @@ const Navbar = () => {
      >
         <DrawerHeader>
           <IconButton onClick={handler}>
-            {window.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {window.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon style={{fontSize: "30px"}}/>}
           </IconButton>
         </DrawerHeader>
         <Divider />
+        <Typography variant="h5"  p={"5px 15px"} sx={{}}>
+          Menu
+        </Typography>
             <List>
                 {['Home', 'About', 'Skill', 'Work','Contact'].map((text, index) => (
                     <ListItem key={text} disablePadding>
-                    <ListItemButton>
+                      <ListItemButton>
                         <ListItemIcon>
-                        {index === 0 && <HomeIcon style={{color: '#674ea7',fontSize: "30px"}}/> }
-                        {index === 1 && <MailIcon style={{color: '#674ea7',fontSize: "30px"}}/>} 
-                        {index === 2 && <GiSkills style={{color: '#674ea7',fontSize: "30px"}}/>}
-                        {index === 3 && <IoMdCodeWorking style={{color: '#674ea7',fontSize: "30px"}}/>}
-                        {index === 4 && <GrContact style={{color: '#674ea7',fontSize: "30px"}}/>}
+                              <Link to="home" smooth={true} duration={900} >
+                            {index === 0 && 
+                                  <HomeIcon style={{color: '#201f1f',fontSize: "30px"}}/>
+                            }
+                            </Link>
+                            <Link to="about" smooth={true} duration={900} >
+                            {index === 1 && <MailIcon style={{color: '#3f9885',fontSize: "30px"}}/>} 
+                            </Link>
+                            <Link to="skills" smooth={true} duration={900} >
+                            {index === 2 && <GiSkills style={{color: '#565f69',fontSize: "30px"}}/>}
+                            </Link>
+                            <Link to="work" smooth={true} duration={900} >
+                            {index === 3 && <IoMdCodeWorking style={{color: '#201f1f',fontSize: "30px"}}/>}
+                            </Link>
+                            <Link to="contact" smooth={true} duration={900} >
+                            {index === 4 && <RiContactsLine style={{color: '#201f1f',fontSize: "30px"}}/>}
+                            </Link>
+                        </ListItemIcon>
+                        <ListItemText primary={<Typography variant="h6">
+                            {text}
+                        </Typography>} />
+                    </ListItemButton>
+                    </ListItem>
+                      ))}
+            </List>
+        <Divider />
+        <Typography variant="h5" p={"5px 15px"} sx={{display: 'flex',alignItems: 'center',}}>
+          Links <BsLink45Deg />
+        </Typography>
+        <List>
+                {['Linkedin', 'github', 'Email', 'My Resume'].map((text, index) => (
+                    <ListItem key={text} disablePadding>
+                      <ListItemButton>
+                        <ListItemIcon>
+                              <a href="#">
+                            {index === 0 && 
+                                  <FaLinkedin style={{color: '#294aa6',fontSize: "30px"}}/>
+                            }
+                            </a>
+                            <a href="https://github.com/Mohammad-pesaraklou" target="_blank" >
+                            {index === 1 && <FaGithub style={{color: '#201f1f',fontSize: "30px"}}/>} 
+                            </a>
+                            <a href="mailto: mhmdpsr6@gmail.com">
+                            {index === 2 && <HiOutlineMail style={{color: '#3f9885',fontSize: "30px"}}/>}
+                            </a>
+                            <a href={docL} download>
+                            {index === 3 && <IoMdCodeWorking style={{color: '#38495e',fontSize: "30px"}}/>}
+                            </a>
                         </ListItemIcon>
                         <ListItemText primary={<Typography variant="h6">
                             {text}
@@ -123,40 +168,40 @@ const Navbar = () => {
              </Drawer>
            </Toolbar>
         </AppBar>
-        <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",md:"block"}}}>
+        <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",md:"none",lg:"block"}}}>
             <Grid item xs={12}>
                     <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} >
                     <div className="mainBox">
-                        <Link to="/" className='linkedinLink' >
-                        Linkedin  <FaLinkedin fontSize="50px"/>
-                        </Link>
+                        <a href={""} className='linkedinLink' >
+                            Linkedin  <FaLinkedin fontSize="50px"/>
+                        </a>
                     </div>
                 </Box>
             </Grid>
             <Grid item xs={12}>
                     <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} className="mainBox">
                     <div>
-                        <Link to="/" className='linkedinLink github'>
+                        <a href="https://github.com/Mohammad-pesaraklou" target="_blank" className='linkedinLink github'>
                         github  <FaGithub fontSize="50px"/>
-                        </Link>
+                        </a>
                     </div>
                 </Box>
             </Grid>
             <Grid item xs={12}>
                     <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} className="mainBox">
                     <div>
-                        <Link to="/" className='linkedinLink email'>
+                        <a href="mailto: mhmdpsr6@gmail.com" className='linkedinLink email'>
                            Email <HiOutlineMail fontSize="50px" color={"#cad1d8"}/>
-                        </Link>
+                        </a>
                     </div>
                 </Box>
             </Grid>
             <Grid item xs={12}>
                     <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} className="mainBox">
                     <div>
-                        <Link to="/" className='linkedinLink resume'>
+                        <a href={docL} download className='linkedinLink resume'>
                         Resume  <RiContactsLine fontSize="45px"/>
-                        </Link>
+                        </a>
                     </div>
                 </Box>
             </Grid>

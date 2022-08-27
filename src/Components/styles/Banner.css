@@ -1,4 +1,6 @@
-
+/* .bannerContainer{
+  background-image: url(../Assets/project-Pic/coo.png);
+} */
   .btnView{
     padding: 10px 20px;
     font-size: 17px;
@@ -32,6 +34,7 @@
   .linkItem{
     text-decoration: none;
     color: #cccccc;
+    cursor: pointer;
   }
   
  
@@ -46,6 +49,7 @@
     color: #fafafa;
     padding: 5px;
     background: #294aa6;
+    font-family: "Montserrat";
   }
   
   .email{
@@ -82,7 +86,6 @@
     transform: rotate(90deg);
     transition: all .2s ease-out;
   }
-
 
 
 

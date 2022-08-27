@@ -1,4 +1,5 @@
 import React from 'react';
+//components
 import MainPage from './MainPage';
 import Navbar from './Navbar';
 

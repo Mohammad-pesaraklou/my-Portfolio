@@ -4,7 +4,7 @@ import "./styles/About.css";
 
 const About = () => {
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" name="about">
         <Grid container className='container'p={2}>
            <Grid item xs={12} sx={{display:"flex",justifyContent:{xs:"left",md:"center"},ml:{xs:15,sm:0,lg:0},alignItems:"center",transform:"translateY(60px)"}}>
             <Typography variant="h2" className='aboutText'>

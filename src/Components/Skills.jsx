@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
+//Photos
 import HtmlP from '../Assets/html.png';
 import CSS from '../Assets/css.png';
 import Js from '../Assets/javascript.png';
@@ -16,7 +17,7 @@ import "./styles/Skills.css";
 
 const Skills = () => {
     return (
-          <Container maxWidth="lg">
+          <Container maxWidth="lg" name="skills">
                        <Grid container className='container' p={4}>
                 <Grid item xs={12} sx={{display:"flex",alignItems:"center"}}>
                     <Typography variant="h3" mb={2} fontFamily="Montserrat" className='textSkill'>

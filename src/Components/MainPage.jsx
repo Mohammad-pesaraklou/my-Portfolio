@@ -3,6 +3,7 @@ import React from 'react';
 //components
 import About from './About';
 import Banner from './Banner';
+import Contact from './Contact';
 import Skills from './Skills';
 import Work from './Work';
 
@@ -13,6 +14,7 @@ const MainPage = () => {
             <About />
             <Skills />
             <Work />
+            <Contact />
         </div>
     );
 };

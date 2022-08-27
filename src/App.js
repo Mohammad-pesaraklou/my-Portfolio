@@ -1,6 +1,11 @@
-import Hero from './Components/Hero';
-import './index.css'
 import { createTheme,ThemeProvider } from '@mui/material';
+//style
+import './index.css'
+//component
+import Hero from './Components/Hero';
+
+
+
 
 const theme = createTheme({
   palette:{
@@ -10,12 +15,13 @@ const theme = createTheme({
     secondary:{
       main: "#cccccc"
     }
-  }
+  },
+
 })
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <ThemeProvider theme={theme}>
       <Hero />
       </ThemeProvider>

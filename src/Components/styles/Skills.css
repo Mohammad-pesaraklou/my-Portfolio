@@ -1,5 +1,5 @@
 .container{
-    height: 100vh;
+    min-height: 100vh;
     color: #cccccc;
 }
 .imgP{
@@ -9,7 +9,6 @@
 }
 .itemContainer{
     background: #ffffff1e;
-    /* width: 150px; */
     padding: 15px 0px;
     display: flex;
     justify-content: center;
