@@ -15,6 +15,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    box-shadow: 5px 5px 10px 1px rgb(19, 18, 18);
 }
 .itemContainer:hover{
     transform: scale(1.1);

@@ -1,8 +1,26 @@
+/* .mainContainer2{
+    background: url(../Assets/project-Pic/coo.png);
+    opacity: 0.80;
+} */
+
 .container{
-    height: 80vh;
+    min-height: 100vh;
     color: #cccccc;
+    
 }
 .aboutText{
     border-bottom: 3px solid #db6300af;
     color: #cccccc;
+
+}
+.mePic{
+    height: 500px;
+    width: 400px;
+    border: 5px solid #d4d1cf;
+    margin-left: 30px;
+}
+.mePic:hover{
+    transition: all .2s ease-out;
+    transform: scale(1.10);
+
 }

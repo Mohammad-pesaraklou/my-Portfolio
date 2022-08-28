@@ -33,6 +33,7 @@
     background-color: #db6300e7;
     font-family: "Montserrat";
     font-size: 18px;
+
 }
 .btn2:hover{
     background-color: #c79770e3;
@@ -50,12 +51,15 @@
 .signItem{
     background-image: url(../Assets/project-Pic/sign-up.png);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;
+    box-shadow: 5px 5px 10px 1px rgb(9, 8, 8)
+    
 }
 .weblogItem{
     background-image: url(../Assets/project-Pic/weblog.png);
     background-position: center;
     background-size: cover;
+    box-shadow: 5px 5px 10px 1px #000;
     
 }
 
@@ -63,20 +67,27 @@
     background-image: url(../Assets/project-Pic/currency.png);
     background-position: center;
     background-size: cover;
+    box-shadow: 5px 5px 10px 1px #000;
 
 }
 .storItem{
     background-image: url(../Assets/project-Pic/store.png);
     background-position: center;
     background-size: cover;
+    box-shadow: 5px 5px 10px 1px #000;
+    
 }
 .weather{
     background-image: url(../Assets/project-Pic/weather.png);
     background-position: center;
     background-size: cover;
+    box-shadow: 5px 5px 10px 1px rgb(19, 18, 18);
+    
 }
 .recipeApp{
     background-image: url(../Assets/project-Pic/recipe.png);
     background-position: center;
     background-size: cover;
+    box-shadow: 5px 5px 10px 1px #000;
+    
 }

@@ -1,0 +1,22 @@
+.backContainer{
+background-color: rgba(0, 0, 0, 0.676);
+width: 99vw;
+height: 500px;
+position: absolute;
+top: 0%;
+left: 0%;
+}
+.category{
+    position: absolute;
+    color: antiquewhite;
+    top: 41%;
+    left: 6%;
+    z-index: 80;
+}
+.btnContainerF{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+    
+}

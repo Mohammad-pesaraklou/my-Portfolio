@@ -8,7 +8,7 @@ import "./styles/Banner.css";
 
 const Banner = () => {
     return (
-        <div name="home" className='bannerContainer'>
+        <div name="home">
         <Container maxWidth="lg">
         <Grid container>
         <Grid item ml={12}>

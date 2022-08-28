@@ -23,6 +23,7 @@ import { RiContactsLine } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsLink45Deg } from 'react-icons/bs';
 import { Link } from 'react-scroll';
+import logo from '../Assets/Mpp.png'
 //Resume
 import docL from '../Assets/Resume/Nresume.docx'
 
@@ -37,10 +38,10 @@ const Navbar = () => {
     return (
       <>
         <AppBar position='sticky' sx={{background: 'linear-gradient(to bottom right,#333333,#121212)'}}>
-           <Toolbar sx={{display:'flex',justifyContent: "space-between",p:2}}>
-             <Typography  variant="h3"sx={{color:"#db6400",marginLeft:{lg:"70px"}}}>
-                Portfolio
-            </Typography>
+           <Toolbar sx={{display:'flex',justifyContent: "space-between",p:2,height: '120px'}}>
+                <img src={logo} style={{width: '170px',marginTop: '13px',cursor: 'pointer'}}/>
+             {/* <Typography  variant="h3"sx={{color:"#db6400",marginLeft:{lg:"70px"}}}>
+            </Typography> */}
 
             <Box className='ulList' sx={{display:{xs:"none",sm: "flex"}}}>
                 <ul className='ulList' style={{display: 'flex',margin: '0 10px',fontFamily: "Montserrat"}}>
