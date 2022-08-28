@@ -9,6 +9,7 @@ import matreialUi from '../Assets/logo.png';
 import rest from '../Assets/picwish.png';
 import gitPhoto from '../Assets/github.png';
 import Graph from '../Assets/index.png';
+import types from '../Assets/types.png';
 //styles
 import "./styles/Skills.css";
 
@@ -80,6 +81,14 @@ const Skills = () => {
                     </Grid>
                     <Grid item xs={6} lg={4}>
                         <div className='itemContainer'>
+                           <img src={types} className="imgP" alt="Html photo"/>
+                           <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
+                            TYPESCRIPT 
+                        </Typography> 
+                        </div>
+                    </Grid>
+                    <Grid item xs={6} lg={4}>
+                        <div className='itemContainer'>
                            <img src={rest} className="imgP" alt="Html photo"/>
                            <Typography mt={2} variant="h6" fontWeight={500} fontFamily="Montserrat">
                            REST API    
@@ -94,6 +103,7 @@ const Skills = () => {
                         </Typography> 
                         </div>
                     </Grid>
+          
                 </Grid>
             </Grid>
           </Container>

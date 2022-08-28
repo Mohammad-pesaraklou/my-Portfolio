@@ -18,7 +18,7 @@ import { GiSkills } from 'react-icons/gi'
 import { IoMdCodeWorking } from 'react-icons/io' 
 import styled from '@emotion/styled';
 import HomeIcon from '@mui/icons-material/Home';
-import {FaGithub, FaLinkedin} from 'react-icons/fa'
+import {FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa'
 import { RiContactsLine } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsLink45Deg } from 'react-icons/bs';
@@ -40,11 +40,9 @@ const Navbar = () => {
         <AppBar position='sticky' sx={{background: 'linear-gradient(to bottom right,#333333,#121212)'}}>
            <Toolbar sx={{display:'flex',justifyContent: "space-between",p:2,height: '120px'}}>
                 <img src={logo} style={{width: '170px',marginTop: '13px',cursor: 'pointer'}}/>
-             {/* <Typography  variant="h3"sx={{color:"#db6400",marginLeft:{lg:"70px"}}}>
-            </Typography> */}
-
+ 
             <Box className='ulList' sx={{display:{xs:"none",sm: "flex"}}}>
-                <ul className='ulList' style={{display: 'flex',margin: '0 10px',fontFamily: "Montserrat"}}>
+                <ul className='ulList' style={{display: 'flex',fontFamily: "Montserrat"}}>
                     <li className='listItem linkItem'>
                     <Link to="home" smooth={true} duration={900} >
                         Home
@@ -139,7 +137,7 @@ const Navbar = () => {
           Links <BsLink45Deg />
         </Typography>
         <List>
-                {['Linkedin', 'github', 'Email', 'My Resume'].map((text, index) => (
+                {['Linkedin', 'github', 'Instagram' ,'Email', 'My Resume'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                       <ListItemButton>
                         <ListItemIcon>
@@ -151,11 +149,14 @@ const Navbar = () => {
                             <a href="https://github.com/Mohammad-pesaraklou" target="_blank" >
                             {index === 1 && <FaGithub style={{color: '#201f1f',fontSize: "30px"}}/>} 
                             </a>
+                            <a href="https://www.instagram.com/_.mhwmd6">
+                            {index === 2 && <FaInstagram style={{color: '#dc2743',fontSize: "30px"}}/>} 
+                             </a>
                             <a href="mailto: mhmdpsr6@gmail.com">
-                            {index === 2 && <HiOutlineMail style={{color: '#3f9885',fontSize: "30px"}}/>}
+                            {index === 3 && <HiOutlineMail style={{color: '#3f9885',fontSize: "30px"}}/>}
                             </a>
                             <a href={docL} download>
-                            {index === 3 && <IoMdCodeWorking style={{color: '#38495e',fontSize: "30px"}}/>}
+                            {index === 4 && <IoMdCodeWorking style={{color: '#38495e',fontSize: "30px"}}/>}
                             </a>
                         </ListItemIcon>
                         <ListItemText primary={<Typography variant="h6">
@@ -169,7 +170,7 @@ const Navbar = () => {
              </Drawer>
            </Toolbar>
         </AppBar>
-        <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",md:"none",lg:"block"}}}>
+        <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",md:"block"}}}>
             <Grid item xs={12}>
                     <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} >
                     <div className="mainBox">
@@ -184,6 +185,15 @@ const Navbar = () => {
                     <div>
                         <a href="https://github.com/Mohammad-pesaraklou" target="_blank" className='linkedinLink github'>
                         github  <FaGithub fontSize="50px"/>
+                        </a>
+                    </div>
+                </Box>
+            </Grid>
+            <Grid item xs={12}>
+                    <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} >
+                    <div className="mainBox">
+                        <a href="https://www.instagram.com/_.mhwmd6" className='linkedinLink instagram' >
+                            Instagram  <FaInstagram fontSize="50px"/>
                         </a>
                     </div>
                 </Box>

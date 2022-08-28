@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import "./styles/About.css";
 import mee from '../Assets/mee.jpg'
+import mee2 from '../Assets/mee2.jpg'
 const About = () => {
     return (
         <div className='mainContainer2'>
@@ -33,7 +34,7 @@ const About = () => {
                    and now i am spending my time to learning new technologies and create project with React js and CSS frame work such as material ui.
                 </Typography>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} sx={{display: 'flex',alignItems: 'center',justifyContent: 'center'}}>
                     <img src={mee} className="mePic"/>
                 </Grid>
            </Grid>

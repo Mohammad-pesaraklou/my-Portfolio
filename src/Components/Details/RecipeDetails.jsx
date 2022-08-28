@@ -14,7 +14,7 @@ const RecipeDetails = () => {
         <div className='mainDiv'>
                  <img src={pic2} style={{width: "98vw",height: '500px'}}/>
                  <div className='category'>
-                    <Typography variant='h3'  fontFamily="Montserrat">
+                    <Typography variant='h3' mb={2} fontFamily="Montserrat">
                         Recipe App
                     </Typography>
                  <Typography color={"#db6400"} fontFamily="Montserrat" variant='h5'>
@@ -34,10 +34,10 @@ const RecipeDetails = () => {
                     <Typography variant="h2" fontFamily="Montserrat" color={"#111111"} fontWeight={600} >
                         Overview
                         </Typography>
-                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6" sx={{display:'flex',alignItems:'center'}}>
+                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h5" sx={{display:'flex',alignItems:'center'}}>
                       Description:
                    </Typography>
-                   <Typography fontFamily="Montserrat" color={"#010201"} mb={3}>
+                   <Typography variant="h6" fontFamily="Montserrat" color={"#010201"} mb={3}>
                    This web app called Recipe app has the capabilities such as searching for recipes of all kinds of foods and also shows us the most popular vegetarian foods and foods in the form of randum.also the food sector based on nationality such as America Italy has thai food and Japanese. 
                     </Typography>
                <div className='btnContainerF'>

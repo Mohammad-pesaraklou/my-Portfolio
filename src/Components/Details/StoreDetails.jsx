@@ -14,7 +14,7 @@ const StoreDetails = () => {
         <div className='mainDiv'>
                  <img src={pic3} style={{width: "98vw",height: '500px'}}/>
                  <div className='category'>
-                    <Typography variant='h3'  fontFamily="Montserrat">
+                    <Typography mb={2} variant='h3'  fontFamily="Montserrat">
                         Store shop
                     </Typography>
                  <Typography color={"#db6400"} fontFamily="Montserrat" variant='h5'>
@@ -34,10 +34,10 @@ const StoreDetails = () => {
                     <Typography variant="h2" fontFamily="Montserrat" color={"#111111"} fontWeight={600} >
                         Overview
                         </Typography>
-                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6" sx={{display:'flex',alignItems:'center'}}>
+                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h5" sx={{display:'flex',alignItems:'center'}}>
                       Description:
                    </Typography>
-                   <Typography fontFamily="Montserrat" color={"#010201"} mb={3}>
+                   <Typography variant="h6" fontFamily="Montserrat" color={"#010201"} mb={3}>
                    This web application, called The Shopping Cart Project, has features such as adding a product to the shopping cart, reducing and deleting and clearing.
                     </Typography>
                <div className='btnContainerF'>

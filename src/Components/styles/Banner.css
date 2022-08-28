@@ -38,6 +38,10 @@
     list-style-type: none;
     font-size: 20px;
   }
+  .listItem:hover{
+  color: #db6400;
+  transition: 0.2s ease-in-out;
+  }
   .ulList{
     margin-left: 30px;
   }
@@ -76,7 +80,9 @@
     transition: all .4s ease-in-out;
     background-color: #657fc8;
   }
-  
+  .instagram{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  }
   .email:hover{
     background: #6fc2b0;
   }
@@ -119,22 +125,22 @@
 
 
 
-  @media (max-width: 900px){
+  @media (max-width: 930px){
   .listItem{
-    padding: 0px 6px;
+    padding: 0px 16px;
     font-size: 19px;
   }
   .ulList{
     margin-left: 10px;
   }
   }
-  /* @media (max-width: 1900px){
+  @media (max-width: 700px){
     .listItem{
-      padding: 0px 26px;
+      padding: 0px 6px;
       font-size: 19px;
     }
     .ulList{
-      margin-left: 49px;
+      margin-left: 9px;
     }
   
-    } */
+    }

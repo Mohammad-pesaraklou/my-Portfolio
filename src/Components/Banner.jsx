@@ -14,16 +14,16 @@ const Banner = () => {
         <Grid item ml={12}>
         <Box sx={{display: 'flex',alignItems: 'center',minHeight: "90vh"}}> 
             <Box >
-                <Typography variant="h4"  sx={{color:"#db6400"}}>
+                <Typography fontFamily="Montserrat" variant="h4"  sx={{color:"#db6400"}}>
                     Hello my Name is
                 </Typography>
-                <Typography  sx={{color: "#cccccc",fontSize:{xs:"40px",md: "60px",lg:"70px"}}}>
+                <Typography fontFamily="Montserrat"  sx={{color: "#cccccc",fontSize:{xs:"40px",md: "60px",lg:"70px"}}}>
                     Mohammad.P
                 </Typography>
-                <Typography  sx={{color:"#baabda",fontSize:{xs:"50px",md: "58px",lg: "83px"}}}>
+                <Typography fontFamily="Montserrat"  sx={{color:"#baabda",fontSize:{xs:"50px",md: "58px",lg: "83px"}}}>
                     i'm Front-End Developer
                 </Typography>
-                <Typography variant="h5"  sx={{color:"#db6300ba",textTransform:"capitalize",width:{xs:"300px",sm:"410px",md:"600px"}}}>
+                <Typography fontFamily="Montserrat" variant="h5"  sx={{color:"#db6300ba",textTransform:"capitalize",width:{xs:"300px",sm:"410px",md:"600px"}}}>
                 i am front end developer specializing in building and occasionally designing.exceptional digital experience currently,i'm focused on building responsive web application
                 </Typography>
                 <Link to="work" smooth={true} duration={900} >

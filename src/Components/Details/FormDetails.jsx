@@ -14,7 +14,7 @@ const FormDetails = () => {
         <div className='mainDiv'>
                  <img src={pic1} style={{width: "98vw",height: '500px'}}/>
                  <div className='category'>
-                    <Typography variant='h3'  fontFamily="Montserrat">
+                    <Typography mb={2} variant='h3'  fontFamily="Montserrat">
                         Validation Form
                     </Typography>
                  <Typography color={"#db6400"} fontFamily="Montserrat" variant='h5'>
@@ -34,10 +34,10 @@ const FormDetails = () => {
                     <Typography variant="h2" fontFamily="Montserrat" color={"#111111"} fontWeight={600} >
                         Overview
                         </Typography>
-                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h6" sx={{display:'flex',alignItems:'center'}}>
+                    <Typography fontFamily="Montserrat" color={"#db6400"} fontWeight={600} variant="h5" sx={{display:'flex',alignItems:'center'}}>
                       Description:
                    </Typography>
-                   <Typography fontFamily="Montserrat" color={"#010201"} mb={3}>
+                   <Typography variant="h6" fontFamily="Montserrat" color={"#010201"} mb={3}>
                    This react registration form contains the identity of the name of the two-step password email and privacy policy and shows the user the error of the hara at the same time
                     </Typography>
                     <Grid item xs={12}>
