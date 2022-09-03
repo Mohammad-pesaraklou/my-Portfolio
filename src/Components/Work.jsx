@@ -54,6 +54,15 @@ const Work = () => {
              </div>
             </Grid>
             <Grid item xs={12} sm={6} lg={4}>
+            <div className='netflix'>
+            <Div>
+                    <Link style={{textDecoration: 'none'}} to="/netflix">
+                    <button className="btn2">Details Page</button>
+                    </Link>
+                </Div>  
+             </div>
+            </Grid>
+            <Grid item xs={12} sm={6} lg={4}>
              <div className='storItem'>
               <Div>
                     <Link style={{textDecoration: 'none'}} to="/store">
@@ -82,6 +91,7 @@ const Work = () => {
                 </Div>  
              </div>
             </Grid>
+         
        
         </Grid>
     </Grid>

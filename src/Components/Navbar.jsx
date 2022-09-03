@@ -9,10 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import { GiSkills } from 'react-icons/gi' 
 import { IoMdCodeWorking } from 'react-icons/io' 
@@ -23,9 +19,10 @@ import { RiContactsLine } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsLink45Deg } from 'react-icons/bs';
 import { Link } from 'react-scroll';
+//logo
 import logo from '../Assets/Mpp.png'
 //Resume
-import docL from '../Assets/Resume/Nresume.docx'
+import docL from '../Assets/Resume/Nresume.pdf'
 
 const Navbar = () => {
 
@@ -39,10 +36,11 @@ const Navbar = () => {
       <>
         <AppBar position='sticky' sx={{background: 'linear-gradient(to bottom right,#333333,#121212)'}}>
            <Toolbar sx={{display:'flex',justifyContent: "space-between",p:2,height: '120px'}}>
+           <Link to="home" smooth={true} duration={900} >
                 <img src={logo} style={{width: '170px',marginTop: '13px',cursor: 'pointer'}}/>
- 
+            </Link>
             <Box className='ulList' sx={{display:{xs:"none",sm: "flex"}}}>
-                <ul className='ulList' style={{display: 'flex',fontFamily: "Montserrat"}}>
+                <ul className='ulList' style={{display: 'flex',fontFamily: 'Quicksand'}}>
                     <li className='listItem linkItem'>
                     <Link to="home" smooth={true} duration={900} >
                         Home
@@ -103,74 +101,78 @@ const Navbar = () => {
           Menu
         </Typography>
             <List>
-                {['Home', 'About', 'Skill', 'Work','Contact'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                      <ListItemButton>
-                        <ListItemIcon>
-                              <Link to="home" smooth={true} duration={900} >
-                            {index === 0 && 
-                                  <HomeIcon style={{color: '#201f1f',fontSize: "30px"}}/>
-                            }
-                            </Link>
-                            <Link to="about" smooth={true} duration={900} >
-                            {index === 1 && <MailIcon style={{color: '#3f9885',fontSize: "30px"}}/>} 
-                            </Link>
-                            <Link to="skills" smooth={true} duration={900} >
-                            {index === 2 && <GiSkills style={{color: '#565f69',fontSize: "30px"}}/>}
-                            </Link>
-                            <Link to="work" smooth={true} duration={900} >
-                            {index === 3 && <IoMdCodeWorking style={{color: '#201f1f',fontSize: "30px"}}/>}
-                            </Link>
-                            <Link to="contact" smooth={true} duration={900} >
-                            {index === 4 && <RiContactsLine style={{color: '#201f1f',fontSize: "30px"}}/>}
-                            </Link>
-                        </ListItemIcon>
-                        <ListItemText primary={<Typography variant="h6">
-                            {text}
-                        </Typography>} />
-                    </ListItemButton>
-                    </ListItem>
-                      ))}
+                <Link to="home" smooth={true} duration={900} >        
+                <div className='hMenu'>
+               <HomeIcon style={{color: '#201f1f',fontSize: "30px"}}/> 
+               <Typography variant='h6'>Home</Typography>
+                </div>
+                <Link to="about" smooth={true} duration={900} >
+                    <div className='hMenu'>
+                      <MailIcon style={{color: '#3f9885',fontSize: "30px"}}/>
+                       <Typography variant='h6'>About</Typography>
+                    </div>
+                </Link>
+                <Link to="skills" smooth={true} duration={900} >
+                    <div className='hMenu'>
+                        <GiSkills style={{color: '#565f69',fontSize: "30px"}}/> 
+                        <Typography variant='h6'>Skills</Typography>
+                    </div>
+                  </Link>
+                  <Link to="work" smooth={true} duration={900} >
+                    <div className='hMenu'>
+                       <IoMdCodeWorking style={{color: '#201f1f',fontSize: "30px"}}/>
+                        <Typography variant='h6'>Work</Typography>
+                    </div>
+                  </Link>
+                  <Link to="contact" smooth={true} duration={900} >
+                      <div className='hMenu'>
+                      <RiContactsLine style={{color: '#201f1f',fontSize: "30px"}}/> 
+                    <Typography variant='h6'>Contact</Typography>
+                      </div>
+                  </Link>
+                </Link>
             </List>
         <Divider />
         <Typography variant="h5" p={"5px 15px"} sx={{display: 'flex',alignItems: 'center',}}>
           Links <BsLink45Deg />
         </Typography>
         <List>
-                {['Linkedin', 'github', 'Instagram' ,'Email', 'My Resume'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                      <ListItemButton>
-                        <ListItemIcon>
-                              <a href="#">
-                            {index === 0 && 
-                                  <FaLinkedin style={{color: '#294aa6',fontSize: "30px"}}/>
-                            }
-                            </a>
-                            <a href="https://github.com/Mohammad-pesaraklou" target="_blank" >
-                            {index === 1 && <FaGithub style={{color: '#201f1f',fontSize: "30px"}}/>} 
-                            </a>
-                            <a href="https://www.instagram.com/_.mhwmd6">
-                            {index === 2 && <FaInstagram style={{color: '#dc2743',fontSize: "30px"}}/>} 
-                             </a>
-                            <a href="mailto: mhmdpsr6@gmail.com">
-                            {index === 3 && <HiOutlineMail style={{color: '#3f9885',fontSize: "30px"}}/>}
-                            </a>
-                            <a href={docL} download>
-                            {index === 4 && <IoMdCodeWorking style={{color: '#38495e',fontSize: "30px"}}/>}
-                            </a>
-                        </ListItemIcon>
-                        <ListItemText primary={<Typography variant="h6">
-                            {text}
-                        </Typography>} />
-                    </ListItemButton>
-                    </ListItem>
-                      ))}
-            </List>
+             <a className='hMenuLink' href='#'>        
+                  <div className='hMenu'>
+                  <FaLinkedin style={{color: '#294aa6',fontSize: "30px"}}/>
+                <Typography variant='h6'>Linkedin</Typography>
+                  </div>
+              <a className='hMenuLink' href="https://github.com/Mohammad-pesaraklou" target="_blank">
+                    <div className='hMenu'>
+                    <FaGithub style={{color: '#201f1f',fontSize: "30px"}}/>
+                       <Typography variant='h6'>Github</Typography>
+                    </div>
+                </a>
+                <a className='hMenuLink' href="https://www.instagram.com/_.mhwmd6">
+                    <div className='hMenu'>
+                      <FaInstagram style={{color: '#dc2743',fontSize: "30px"}}/> 
+                        <Typography variant='h6'>Instagram</Typography>
+                    </div>
+                  </a>
+                  <a className='hMenuLink' href="mailto: mhmdpsr6@gmail.com">
+                    <div className='hMenu'>
+                       <HiOutlineMail style={{color: '#3f9885',fontSize: "30px"}}/>
+                        <Typography variant='h6'>Email</Typography>
+                    </div>
+                  </a>
+                  <a className='hMenuLink' href={docL} download>
+                      <div className='hMenu'>
+                        <IoMdCodeWorking style={{color: '#38495e',fontSize: "30px"}}/>
+                    <Typography variant='h6'>My Resume</Typography>
+                      </div>
+                  </a>
+                </a>  
+        </List>
        
              </Drawer>
            </Toolbar>
         </AppBar>
-        <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",md:"block"}}}>
+        <Grid item xs={12} sx={{position:"fixed",bottom:"44%",display:{xs:"none",sm:"none",lg:"block"}}}>
             <Grid item xs={12}>
                     <Box sx={{width: "180px",display:"flex",justifyContent:"space-between",alignItems:"center"}} >
                     <div className="mainBox">
@@ -229,3 +231,4 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   }));
 
 export default Navbar;
+

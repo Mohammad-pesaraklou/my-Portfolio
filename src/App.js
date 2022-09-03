@@ -15,6 +15,7 @@ import FormDetails from './Components/Details/FormDetails';
 import RecipeDetails from './Components/Details/RecipeDetails';
 import WeatherDetails from './Components/Details/WeatherDetails';
 import WebDetails from './Components/Details/WebDetails';
+import Netflix from './Components/Details/Netflix';
 import ScrollToTop from './ScrollToTop';
 
 
@@ -43,6 +44,7 @@ function App() {
           <Route path='/weather' element={<WeatherDetails />}/>
           <Route path='/crypto' element={<CryptoDetails />} />
           <Route path='/weblog' element={<WebDetails />} />
+          <Route path='/netflix' element={<Netflix />} />
         </Routes>
       </ThemeProvider>
     </div>

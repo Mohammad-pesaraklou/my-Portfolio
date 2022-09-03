@@ -22,5 +22,4 @@
 .mePic:hover{
     transition: all .2s ease-out;
     transform: scale(1.10);
-
 }

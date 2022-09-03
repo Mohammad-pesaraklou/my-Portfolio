@@ -24,8 +24,7 @@ const RecipeDetails = () => {
             <div className='backContainer'>
             </div>
         <Grid container className='container'p={2}>
-        <Container maxWidth="lg">
-           <Grid container spacing={6} sx={{display:{xs:"block",md:"flex"},justifyContent:"center",alignItems:"center"}}>
+           <Grid container >
                 <Grid item xs={12}> 
                 <AiOutlineArrowLeft color='black' style={{fontSize: '30px',cursor: 'pointer'}} onClick={() => navigate(-1)}/>
                 <Typography fontFamily="Montserrat" mt={2} color={"#db6400"} fontWeight={600} variant="h6">
@@ -51,7 +50,6 @@ const RecipeDetails = () => {
                 </Grid>
 
            </Grid>
-        </Container>
         </Grid>
         </div>
     );

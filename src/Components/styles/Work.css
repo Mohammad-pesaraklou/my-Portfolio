@@ -91,3 +91,9 @@
     box-shadow: 5px 5px 10px 1px #000;
     
 }
+.netflix{
+    background-image: url(../Assets/project-Pic/netflix.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px 10px 1px #000;
+}

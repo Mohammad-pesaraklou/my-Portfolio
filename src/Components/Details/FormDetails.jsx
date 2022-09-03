@@ -24,8 +24,8 @@ const FormDetails = () => {
             <div className='backContainer'>
             </div>
         <Grid container className='container'p={2}>
-        <Container maxWidth="lg">
-           <Grid container spacing={6} sx={{display:{xs:"block",md:"flex"},justifyContent:"center",alignItems:"center"}}>
+       
+           <Grid container>
                 <Grid item xs={12}> 
                 <AiOutlineArrowLeft color='black' style={{fontSize: '30px',cursor: 'pointer'}} onClick={() => navigate(-1)}/>
                 <Typography fontFamily="Montserrat" color={"#db6400"} mt={2} fontWeight={600} variant="h6">
@@ -53,7 +53,7 @@ const FormDetails = () => {
                 </Grid>
 
            </Grid>
-        </Container>
+    
         </Grid>
         </div>
     );
